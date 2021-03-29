@@ -1,11 +1,5 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-#firebase
-.firebase
-.firebaserc
-firebase.json
-proxy-conf.json
-
 # compiled output
 /dist
 /tmp
@@ -28,6 +22,11 @@ speed-measure-plugin*.json
 *.launch
 .settings/
 *.sublime-workspace
+
+# firebase
+.firebase
+.firebaserc
+firebase.json
 
 # IDE - VSCode
 .vscode/*
