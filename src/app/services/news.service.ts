@@ -17,6 +17,6 @@ export class NewsService {
         'Access-Control-Allow-Origin':'*'
       })
     };
-    return this.http.get<News>('https://newsapi.org/v2/everything?q=bitcoin&apiKey=efe79552ec83456db6564c1ec305bad8', options);
+    return this.http.get<News>('everything?q=bitcoin&apiKey=efe79552ec83456db6564c1ec305bad8', options);
   }
 }

@@ -1,7 +1,7 @@
 {
-  "https://newsapi.org/v2/*": {
-    "target": "https://news-3b11c.web.app/",
+  "everything?q=bitcoin&apiKey=efe79552ec83456db6564c1ec305bad8": {
+    "target": "https://newsapi.org/v2/",
     "secure": false,
-    "logLevel": "debug"
+    "changeOrigin": true
   }
 }
