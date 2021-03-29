@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row col-lg col-md">
+    <div
+      *ngFor="let article of articles; let i = index"
+      class="card animated fadeIn fast"
+      style="width: 18rem;"
+      [ngStyle]="{
+        'margin': '1em auto'
+      }"
+      >
+        <img
+          [src]="articles[i].urlToImage"
+          class="card-img-top"
+          [alt]="articles[i].title"
+          [ngStyle]="{ 'cursor': 'pointer' }"
+          (click)="onClick(article)"
+        >
+        <div class="card-body">
+          <h5 class="card-title"> <a class="overlay" [ngStyle]="{ 'cursor': 'pointer', 'color':'#000' }" [href]="articles[i].url" target="_blank"> {{ articles[i].title }} </a> </h5>
+          <h6 class="card-subtitle mb-2 text-muted"> {{ articles[i].author == '(Deleted account)' ? 'Author undefined' : articles[i].author }} </h6>
+          <p class="card-text"> {{ [ !articles[i].content] ? [ articles[i].description | limitToPipe:10 ] : [ articles[i].content | limitToPipe:10 ]  }} </p>
+        </div>
+    </div>
+</div>
+</div>

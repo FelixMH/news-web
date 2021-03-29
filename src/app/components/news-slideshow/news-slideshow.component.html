@@ -1,0 +1,33 @@
+<!-- Slider main container -->
+<div class="swiper-container">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div *ngFor="let article of articles; let i = index"
+          class="swiper-slide"
+          [ngStyle]="{
+            'background-size': 'cover'
+          }"
+          >
+          <img class="image-new" [src]="articles[i].urlToImage" />
+      <div class="article-content">
+        <a
+          [ngStyle]="{ 'cursor': 'pointer', 'text-decoration': 'none', 'color':'#fff' }"
+          href="{{ articles[i].url }}"
+          target="_blank">
+            <h3> {{ articles[i].title }}</h3>
+        </a>
+        <p>{{ articles[i].content | slice: 95}} {{ articles[i].content > 10 ? '...' : '' }}</p>
+      </div>
+    </div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div (click)="onSlidePrev()" class="swiper-button-prev"></div>
+  <div (click)="onSlideNext()" class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>

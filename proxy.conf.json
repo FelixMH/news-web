@@ -1,0 +1,7 @@
+{
+  "https://newsapi.org/v2/*": {
+    "target": "https://news-3b11c.web.app/",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}
