@@ -16,6 +16,9 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  // Se envía el artículo del cual se clickeó y navega a la ruta { detail/:id } .
+  // este ID es el de la fuente, ya que coincidia el mismo id para todos los articulos, se optó
+  // por esta opción.
   onClick( art: Article ) {
     this.router.navigate( ['/detail', art.source.id] );
     console.log( art );

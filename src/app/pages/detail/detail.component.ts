@@ -22,6 +22,7 @@ export class DetailComponent implements OnInit {
     const id = this.ar.snapshot.params.id;
     return this.news.getNews()
       .subscribe( resp => {
+        // Llegan los articulos
         this.articles = resp.articles;
       })
   }
